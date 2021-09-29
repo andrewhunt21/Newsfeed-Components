@@ -115,6 +115,8 @@ const data = [
   Refresh the page to see the new article.
 */
 
+const articles = document.querySelector('.articles');
+
 function articleMaker({ title, date, firstParagraph, secondParagraph, thirdParagraph }) {
 
   const article = document.createElement('div');
@@ -148,3 +150,11 @@ function articleMaker({ title, date, firstParagraph, secondParagraph, thirdParag
 
   return article;
 }
+
+const theArticles = data.map(elem => {
+  return articleMaker(elem);
+})
+
+theArticles.forEach(elem => {
+  articles.appendChild(elem);
+})
