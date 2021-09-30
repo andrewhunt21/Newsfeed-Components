@@ -119,7 +119,7 @@ const articles = document.querySelector('.articles');
 
 function articleMaker({ title, date, firstParagraph, secondParagraph, thirdParagraph }) {
 
-  const article = document.createElement('div');
+  const theArticle = document.createElement('div');
   const theTitle = document.createElement('h2');
   const theDate = document.createElement('p');
   const p1 = document.createElement('p');
@@ -127,14 +127,14 @@ function articleMaker({ title, date, firstParagraph, secondParagraph, thirdParag
   const p3 = document.createElement('p');
   const expandButton = document.createElement('span');
 
-  article.appendChild(theTitle);
-  article.appendChild(theDate);
-  article.appendChild(p1);
-  article.appendChild(p2);
-  article.appendChild(p3);
-  article.appendChild(expandButton);
+  theArticle.appendChild(theTitle);
+  theArticle.appendChild(theDate);
+  theArticle.appendChild(p1);
+  theArticle.appendChild(p2);
+  theArticle.appendChild(p3);
+  theArticle.appendChild(expandButton);
 
-  article.classList.add('article');
+  theArticle.classList.add('article');
   theDate.classList.add('date');
   expandButton.classList.add('expandButton');
 
@@ -145,10 +145,10 @@ function articleMaker({ title, date, firstParagraph, secondParagraph, thirdParag
   p3.textContent = thirdParagraph;
 
   expandButton.addEventListener('click', evt => {
-    article.classList.toggle('article-open');
+    theArticle.classList.toggle('article-open');
   })
 
-  return article;
+  return theArticle;
 }
 
 const theArticles = data.map(elem => {
