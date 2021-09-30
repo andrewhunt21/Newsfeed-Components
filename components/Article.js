@@ -143,6 +143,7 @@ function articleMaker({ title, date, firstParagraph, secondParagraph, thirdParag
   p1.textContent = firstParagraph;
   p2.textContent = secondParagraph;
   p3.textContent = thirdParagraph;
+  expandButton.textContent = '+';
 
   expandButton.addEventListener('click', evt => {
     theArticle.classList.toggle('article-open');
